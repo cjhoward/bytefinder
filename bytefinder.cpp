@@ -23,7 +23,7 @@
 #include <iostream>
 #include <vector>
 
-#define WILDCARD 0xFF
+#define WILDCARD 0x100
 
 int main(int argc, const char* argv[])
 {
