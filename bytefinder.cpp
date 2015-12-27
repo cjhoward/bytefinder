@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016  Christopher J. Howard
+ * Copyright (C) 2015  Christopher J. Howard
  *
  * This file is part of Bytefinder.
  *
