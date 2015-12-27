@@ -1,6 +1,6 @@
 # Bytefinder
 
-This is a small utility program which searches files for a pattern of bytes. It was created for searching for non-ASCII strings in ROMs.
+This is a small utility program which a file for a pattern of bytes. It was created for searching for non-ASCII strings in ROMs.
 
 The search works by forming a numerical difference pattern based on the integer values of the string characters relative to the first character in the string. Byte sequences in the file are then compared to this pattern. The address of each matching byte sequence is returned.
 
