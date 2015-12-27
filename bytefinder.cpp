@@ -29,7 +29,7 @@ int main(int argc, const char* argv[])
 {
 	if (argc != 3)
 	{
-		std::cerr << "usage: bytefinder <file> <string>" << std::endl;
+		std::cerr << "Usage: bytefinder <file> <string>" << std::endl;
 		return EXIT_FAILURE;
 	}
 
