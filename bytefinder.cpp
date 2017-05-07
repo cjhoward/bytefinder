@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015  Christopher J. Howard
+ * Copyright (C) 2015-2017  Christopher J. Howard
  *
  * This file is part of Bytefinder.
  *
@@ -100,6 +100,7 @@ int main(int argc, const char* argv[])
 	char byte;
 	int base_offset;
 	int match_count;
+	int found_count = 0;
 	int file_offset = 0;
 	while (file.get(byte))
 	{
@@ -126,6 +127,7 @@ int main(int argc, const char* argv[])
 
 				// Pattern found
 				std::printf("0x%08x\n", base_offset);
+				++found_count;
 				break;
 			}
 		}
@@ -135,6 +137,26 @@ int main(int argc, const char* argv[])
 	}
 
 	file.close();
+	
+	// Check if any patterns were found
+	if (!found_count)
+	{
+		std::cerr << "No results found" << std::endl;
+		return EXIT_FAILURE;
+	}
+	else
+	{
+		std::cout << "Found " << found_count;
+		
+		if (found_count == 1 )
+		{
+			std::cout << " match" << std::endl;
+		}
+		else
+		{
+			std::cout << " matches" << std::endl;
+		}
+	}
 
 	return EXIT_SUCCESS;
 }
