@@ -141,7 +141,7 @@ int main(int argc, const char* argv[])
 	// Check if any patterns were found
 	if (!found_count)
 	{
-		std::cerr << "No results found" << std::endl;
+		std::cerr << "No matches found" << std::endl;
 		return EXIT_FAILURE;
 	}
 	else
